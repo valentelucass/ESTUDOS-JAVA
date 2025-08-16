@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class Main6 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Informe o código: ");
+        int codigo = input.nextInt();
+
+        System.out.print("Informe a quantidade: ");
+        int quantidade = input.nextInt();
+
+        switch (codigo) {
+            case 100:
+                System.out.println("Você escolheu Cachorro quente. O valor fica: R$" + String.format("%.2f",(quantidade*1.20))); // String.format("%.2f", serve para limitar as casas decimais sendo print ou println.
+                break;
+
+            case 101:
+                System.out.println("Você escolheu Bauru Simples. O valor fica: R$" + String.format("%.2f",(quantidade*1.30)));
+                break;
+
+            case 102:
+                System.out.println("Você escolheu Bauru com ovo. O valor fica: R$" + String.format("%.2f",(quantidade*1.50)));
+                break;
+
+            case 103:
+                System.out.println("Você escolheu Hamburguer. O valor fica: R$" + String.format("%.2f",(quantidade*1.20)));
+                break;
+
+            case 104:
+                System.out.println("Você escolheu Cheesburguer. O valor fica: R$" + String.format("%.2f",(quantidade*1.30)));
+                break;
+                
+            case 105:
+                System.out.println("Você escolheu Refrigerante. O valor fica: R$" + String.format("%.2f",(quantidade*1.00)));
+                break;
+
+            default:
+                System.out.println("Comando inválido");
+                break;
+        }
+        input.close();
+    }
+}

@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class Main5 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("Informe o primeiro valor: ");
+        int num1 = input.nextInt();
+
+        System.out.println("Informe o segundo valor: ");
+        int num2 = input.nextInt();
+
+        System.out.println("========================================");
+        System.out.println("M - Média entre os números digitados.");
+        System.out.println("S - Diferença do maior pelo menor.");
+        System.out.println("P - Produto entre os números digitados.");
+        System.out.println("D - Divisão do primeiro pelo segundo.");
+        System.out.println("========================================");
+        char operação = input.next().toUpperCase().charAt(0);
+
+        switch (operação) {
+            case 'M':
+                System.out.println("Resultado da média: " + ((num1+num2)/2));
+                break;
+
+                case 'S':
+                int maior = Math.max(num1, num2); // Math.max(num1, num2) retorna o maior valor entre num1 e num2
+                int menor = Math.min(num1, num2); // Math.min(num1, num2) retorna o menor valor entre num1 e num2
+                System.out.println("Resultado da diferença: " + (maior-menor));
+                break;
+
+            case 'P':
+                System.out.println("Resultado do produto: " + (num1*num2));
+                break;
+
+            case 'D':
+                System.out.println("Resultado divisão: " + (num1/num2)); // como usei int, ele vai dar apenas o resto dependendo do valor que usar
+                break;
+
+            default:
+                System.out.println("Letra inválida");
+        }
+        input.close();
+    }
+}

@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Desafio_1 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("Digite sua idade: ");
+        int idade = input.nextInt();
+        input.nextLine();
+
+        System.out.println("Seu título de eleitor está regular? (Sim/Não)");
+        String titulo = input.nextLine();
+
+        System.out.println("Você está na sua zona eleitoral no dia da votação? (Sim/Não)");
+        String zona = input.nextLine();
+
+        if (idade >= 16 && "Sim".equals(titulo) && "Sim".equals(zona)) {
+            System.out.println("Aceito!");
+        } else {
+            System.out.println("Não pode votar!");
+        }
+    input.close();
+
+    }
+}

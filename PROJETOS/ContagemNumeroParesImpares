@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class ContagemNumeroParesImpares {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int pares = 0;
+        int impares = 0;
+        
+        for (int i = 1; i <= 10; i++) {
+            System.out.print(i + " - Digite um valor: ");
+            int valor = input.nextInt();
+
+            if (valor % 2 == 0) {
+                System.out.println("======================");
+                System.out.println("É par!");
+                pares++; // Conta quantos são pares
+            } else {
+                System.out.println("======================");
+                System.out.println("É impar!");
+                impares++;
+            }
+            System.out.println("======================");
+        }
+        // Exibe os resultados finais
+        System.out.println("======================");
+        System.out.println("      RESULTADOS      ");
+        System.out.println("======================");
+        System.out.println("Quantidade de números PARES: " + pares);
+        System.out.println("Quantidade de números ÍMPARES: " + impares);
+        System.out.println("======================");
+        input.close();
+    }
+}

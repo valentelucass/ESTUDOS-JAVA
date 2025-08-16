@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class CincoNotasVetor {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        double[] notas = new double[3];
+        double soma = 0;
+
+        for (int i = 0; i < 3; i++) { // Corrigido "i+" para "i++"
+            System.out.print((i + 1) + " - Digite uma nota: ");
+            notas[i] = entrada.nextDouble();
+            soma += notas[i]; // Acumulando a soma das notas
+        }
+
+        System.out.println("Imprimindo os elementos do vetor:");
+        for (int i = 0; i < 3; i++) { // Corrigido "i+" para "i++"
+            System.out.println(notas[i]); // Corrigido ":" para ";"
+        }
+
+        double media = soma / 3; // Calculando a média corretamente
+        System.out.println("Média é: " + media);
+
+        entrada.close();
+    }
+}

@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Informe seu salário: ");
+        int salario = input.nextInt();
+        
+        System.out.println("=========== MENU ===========");
+        System.out.println("Informe qual seu plano: ");
+        System.out.println("1 - Plano A");
+        System.out.println("2 - Plano B");
+        System.out.println("3 - Plano C");
+        System.out.println("===  ESCOLHA UMA OPÇÃO   ===");
+        int plano = input.nextInt();
+
+        switch (plano) {
+            case 1:
+                System.out.println("Seu aumento é: " + (salario*0.10));
+                break;
+
+            case 2:
+                System.out.println("Seu aumento é: " + (salario*0.15));
+                break;
+
+            case 3:
+                System.out.println("Seu aumento é: " + (salario*0.20));
+                break;
+
+            default:
+                System.out.println("Opção invalida");
+
+        input.close();
+        }
+
+    }
+}

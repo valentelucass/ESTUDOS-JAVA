@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+// Criamos um enum para os dias da semana
+enum DiaSemana {
+    DOMINGO, SEGUNDA, TERCA, QUARTA, QUINTA, SEXTA, SABADO
+}
+
+public class Main1 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        DiaSemana dia;
+
+        System.out.println("Digite um número de 1 a 7 para descobrir o dia da semana: ");
+        int numero = input.nextInt();
+
+        switch (numero) {
+            case 1:
+                dia = DiaSemana.DOMINGO;
+                break;
+
+            case 2:
+                dia = DiaSemana.SEGUNDA;
+                break;
+
+            case 3:
+                dia = DiaSemana.TERCA;
+                break;
+
+            case 4:
+                dia = DiaSemana.QUARTA;
+                break;
+
+            case 5:
+                dia = DiaSemana.QUINTA;
+                break;
+
+            case 6:
+                dia = DiaSemana.SEXTA;
+                break;
+
+            case 7:
+                dia = DiaSemana.SABADO;
+                break;
+        
+            default:
+            System.out.println("Número inválido! Digite um valor entre 1 e 7.");
+            return; // Encerra o programa se o número for inválido
+        }
+
+        // Exibimos o resultado
+        System.out.println("O dia correspondente é: " + dia);
+
+        input.close();
+    }
+}

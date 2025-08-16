@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+public class Main5_2 {
+public static void main(String[] args) {
+Scanner input = new Scanner(System.in);
+
+// Entrada dos números
+System.out.print("Informe o primeiro valor: ");
+int num1 = input.nextInt();
+
+System.out.print("Informe o segundo valor: ");
+int num2 = input.nextInt();
+
+// Exibição do menu
+System.out.println("======= Escolha uma operação =====");
+System.out.println("M - Média entre os números digitados");
+System.out.println("S - Diferença do maior pelo menor");
+System.out.println("P - Produto entre os números digitados");
+System.out.println("D - Divisão do primeiro pelo segundo");
+System.out.println("=================================");
+
+System.out.print("Digite a operação desejada: ");
+char operacao = input.next().toUpperCase().charAt(0);
+
+// Estrutura de decisão para executar a operação escolhida
+switch (operacao) {
+    case 'M': // Média
+        double media = (num1 + num2) / 2.0;
+        System.out.println("Resultado da média: " + media);
+        break;
+
+    case 'S': // Diferença do maior pelo menor
+        int maior = Math.max(num1, num2); // Obtém o maior número
+        int menor = Math.min(num1, num2); // Obtém o menor número
+        System.out.println("Resultado da diferença: " + (maior - menor));
+        break;
+
+    case 'P': // Produto
+        System.out.println("Resultado do produto: " + (num1 * num2));
+        break;
+
+    case 'D': // Divisão com verificação de divisão por zero
+        if (num2 != 0) {
+            double divisao = (double) num1 / num2;
+            System.out.println("Resultado da divisão: " + divisao);
+        } else {
+            System.out.println("Erro: Não é possível dividir por zero.");
+        }
+        break;
+
+    default: // Caso o usuário digite uma opção inválida
+        System.out.println("Erro: Operação inválida. Escolha M, S, P ou D.");
+}
+
+input.close(); // Fecha o scanner para evitar vazamento de recursos
+}
+}

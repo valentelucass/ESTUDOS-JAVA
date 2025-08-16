@@ -1,0 +1,77 @@
+import java.util.Scanner;
+
+// Criamos um enum para os meses
+enum Mes {
+    JANEIRO, FEVEREIRO, MARCO, ABRIL, MAIO, JUNHO, JULHO, AGOSTO, SETEMBRO, OUTUBRO, NOVEMBRO, DEZEMBRO
+}
+
+public class Main2 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        Mes num;
+
+        System.out.println("Digite um número de 1 a 12 para descobrir o mês: ");
+        int numero = input.nextInt();
+
+        switch (numero) {
+            case 1:
+                num = Mes.JANEIRO;
+                break;
+
+            case 2:
+                num = Mes.FEVEREIRO;
+                break;
+
+            case 3:
+                num = Mes.MARCO;
+                break;
+
+            case 4:
+                num = Mes.ABRIL;
+                break;
+
+            case 5:
+                num = Mes.MAIO;
+                break;
+
+            case 6:
+                num = Mes.JUNHO;
+                break;
+
+            case 7:
+                num = Mes.JULHO;
+                break;
+
+            case 8:
+                num = Mes.AGOSTO;
+                break;
+
+            case 9:
+                num = Mes.SETEMBRO;
+                break;
+            
+            case 10:
+                num = Mes.OUTUBRO;
+                break;
+
+            case 11:
+                num = Mes.NOVEMBRO;
+                break;
+            
+            case 12:
+                num = Mes.DEZEMBRO;
+                break;
+        
+            default:
+            System.out.println("Número inválido! Digite um valor entre 1 e 12.");
+            return; // Encerra o programa se o número for inválido
+        }
+
+        // Exibimos o resultado
+        System.out.println("O mês correspondente é: " + num);
+
+        input.close();
+    }
+}

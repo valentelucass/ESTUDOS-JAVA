@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main3 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Digite uma letra, M, V ou N: ");
+        char num = input.next().toUpperCase().charAt(0); // .toUpperCase() Converte a entrada para maiúscula, caso o usuário coloque minúsculo
+
+        switch (num) {
+            case 'M':
+                System.out.println("Bom dia!");
+                break;
+
+            case 'V':
+                System.out.println("Boa tarde!");
+                break;
+
+            case 'N':
+                System.out.println("Boa noite!");
+                break;
+        
+            default:
+            System.out.println("Letra inválida.");
+            return;
+        }
+        input.close();
+    }
+}
