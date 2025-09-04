@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ESTUDOS-JAVA.iml" filepath="$PROJECT_DIR$/ESTUDOS-JAVA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RECURSIVIDADE/RECURSIVIDADE.iml" filepath="$PROJECT_DIR$/RECURSIVIDADE/RECURSIVIDADE.iml" />
     </modules>
   </component>
 </project>

@@ -8,7 +8,7 @@ public class ex3 {
         ArrayList<Integer> numeros = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Digite o índice para consultar(ex: 0, 1, 2, 3...): ");
+        System.out.print("Digite o número para consultar(ex: 0, 1, 2, 3...): ");
         int valor = scanner.nextInt();
         boolean existe = numeros.contains(valor);
 
@@ -18,5 +18,6 @@ public class ex3 {
             System.out.println("Número " + valor + " existe dentro do Array? Não existe!");
         }
         scanner.close();
+
     }
 }
