@@ -16,7 +16,7 @@ public class ex8 {
         }
 
         // Caso recursivo para negativo
-        return -Multip_Rec(n1, -n2);
+        return Multip_Rec(n1, -n2);
     }
 
     public static void main(String[] args) {
